@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="0dp"
+        android:gravity="center_horizontal">
+
+        <!-- Circle background top-left -->
+
+        <!-- Logo circle -->
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="start"
+            android:background="@drawable/circle_light_purple"
+            android:translationX="-40dp"
+            android:translationY="-40dp"
+            />
+
+        <View
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/circle_purple"
+            android:gravity="center" />
+
+        <!-- Username -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/usernameLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:hint="Username"
+            app:endIconMode="clear_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tvUsernameError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="username is required!"
+            android:textSize="12sp"
+            android:textColor="#80000000"
+            android:visibility="gone"
+            android:paddingStart="4dp" />
+
+        <!-- Password -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Password"
+            app:endIconMode="clear_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tvPasswordError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="password is required!"
+            android:textSize="12sp"
+            android:textColor="#80000000"
+            android:visibility="gone"
+            android:paddingStart="4dp" />
+
+        <!-- Login Button -->
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Login"
+            android:textColor="#000"
+            android:backgroundTint="#EDE2F7" />
+
+        <!-- Or sign in -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="or sign in here"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+</ScrollView>
